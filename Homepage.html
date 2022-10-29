@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>Forum</title>
+</head>
+<style type="text/css">
+    *
+    {
+        
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        transition: 0.3s;
+    }
+    body
+    {
+        width: 100vw;
+        height: 100vh;
+        background: #f1f1f1;
+        overflow: hidden;
+        background-image: url("./img/bgimg.jpg");
+        background-size: cover;
+    }
+    h3
+    {
+        font-weight: bold;
+        font-size: xx-large;
+        margin-top: 100px;
+        margin-left: 100px;
+        color: #ff3366;
+        letter-spacing: 1.5px;
+    }
+    h1
+    {
+        text-align: center;
+        font-size: 60px;
+        color: #3c3e41;
+        margin-left: 100px;
+        margin-top: 20px;
+    }
+    .container
+    {
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 50px;
+    }
+    .box
+    {
+        width: 250px;
+        height: 250px;
+        padding: 50px;
+        overflow: hidden;
+        border-radius: 14px;
+        background: linear-gradient(145deg, #e6e6e6, #ffffff);
+        box-shadow:  8px 8px 16px #d1d1d1,
+                     -8px -8px 16px #ffffff;
+        cursor: pointer;         
+    }
+    .box:hover
+    {
+        background: linear-gradient(145deg, #bb0738 , #ff3366);
+        box-shadow:  8px 8px 16px #d1d1d1,
+                     -8px -8px 16px #ffffff;
+    }
+    .box .icons
+    {
+        font-size: 50px;
+        color: #ff3366;
+        margin-top: 10px;
+    }
+    .box:hover .icons
+    {
+        margin-top: 0px;
+        color: #fff;
+    }
+    .box h2
+    {
+        font-weight: 500;
+        margin-top: 25px;
+    }
+    .box:hover h2
+    {
+        color: #fff;
+    }
+    .box p 
+    {
+        color: grey;
+        font-weight: 400;
+        margin-top: 25px;
+    }
+    .box:hover p 
+    {
+        color: #fff;
+    }
+    .arrow
+    {
+        font-size: 30px;
+        color: #ff3366;
+        margin-top: 40px;
+        display: none;
+    }
+    .box:hover .arrow
+    {
+        color: #fff;
+        margin-top: 30px;
+        display: block;
+    }
+</style>
+<body>
+    <div>
+        <form action="/logout" method="POST">
+            <div id="login_container">
+                <button>Log Out</button>
+            </div>
+        
+        </form>
+    </div>
+    <h3>Flight Booking</h3>
+    <h1>Homepage</h1>
+    <div class="container">
+        <div class="box">
+            <ion-icon class="icons" name="menu-outline"></ion-icon>
+            <h2>Previous Bookings</h2>
+            <p>View all your previous bookings here.</p>
+            <a href="bookings.html"><ion-icon class="arrow" name="list-circle-outline"></ion-icon></a>
+        </div>
+        <div class="box">
+            <ion-icon class="icons" name="book-outline"></ion-icon>
+            <h2>Passengers List</h2>
+            <p>The List of all the passengers can be viewed here.</p>
+            <a href="passengers.html"><ion-icon class="arrow" name="people-circle-outline"></ion-icon></a>
+        </div>
+        <div class="box">
+            <ion-icon class="icons" name="person-circle-outline"></ion-icon>
+            <h2>Payments</h2>
+            <p>Keep an eye on your payments here.</p>
+            <a href="payments.html"><ion-icon class="arrow" name="wallet-outline"></ion-icon></a>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
